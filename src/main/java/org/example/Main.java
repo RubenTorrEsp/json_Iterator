@@ -11,10 +11,12 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         String rutaJson = "E:\\Proyectos\\json_iterator\\src\\main\\java\\org\\example\\colores.json";
+        String claveLista = "miLista";  // Reemplaza con la clave de la lista que quieres verificar
+
         try {
             FileReader reader = new FileReader(rutaJson);
             JsonElement jsonElement = JsonParser.parseReader(reader);
-            buscarCampoVacio(jsonElement);
+            buscarCampoVacioEnLista(jsonElement, claveLista);
         } catch (IOException e) {
             e.printStackTrace();
         }
