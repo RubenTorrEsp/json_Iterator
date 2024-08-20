@@ -20,6 +20,28 @@ public class Main {
         }
     }
 
+    private static void buscarCampoVacioEnLista(JsonElement elemento, String claveLista) {
+        if (elemento.isJsonObject()) {
+            JsonObject objeto = elemento.getAsJsonObject();
+
+            // Verificar si el objeto contiene la lista que buscamos
+            if (objeto.has(claveLista)) {
+                JsonElement lista = objeto.get(claveLista);
+
+                if (lista.isJsonArray()) {
+                    JsonArray jsonArray = lista.getAsJsonArray();
+                    for (JsonElement item : jsonArray) {
+                        buscarCampoVacio(item);
+                    }
+                } else {
+                    System.out.println("El campo '" + claveLista + "' no es un array.");
+                }
+            } else {
+                System.out.println("El campo '" + claveLista + "' no existe en el JSON.");
+            }
+        }
+    }
+
     private static void buscarCampoVacio(JsonElement elemento) {
         if (elemento.isJsonObject()) {
             JsonObject objeto = elemento.getAsJsonObject();
