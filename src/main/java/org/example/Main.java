@@ -57,7 +57,7 @@ public class Main {
                     System.out.println("El campo '" + key + "' está vacío (cadena vacía).");
                 }
                 // Verificar si el campo es un array vacío
-                else if (valor.isJsonArray() && valor.getAsJsonArray().isEmpty()) {
+                else if (valor.isJsonArray() && valor.getAsJsonArray().size() == 0) {
                     System.out.println("El campo '" + key + "' está vacío (array vacío).");
                 }
                 // Verificar si el campo es un objeto vacío
