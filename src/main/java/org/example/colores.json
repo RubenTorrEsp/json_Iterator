@@ -1,5 +1,9 @@
 {
-    "arrayColores": "colores",
-    "field1": "",
-    "field2": []
+    "nombre": "Colores",
+    "descripcion": "",
+    "miLista": [
+        {"color": "rojo", "valor1": ""},
+        {"color": "verde", "valor2": "32"},
+        {"color": "azul", "valor3": null}
+    ]
 }
