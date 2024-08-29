@@ -3,23 +3,13 @@ package org.example;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
-import java.io.FileReader;
-import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        String rutaJson = "E:\\Proyectos\\json_iterator\\src\\main\\java\\org\\example\\colores.json";
-        String claveLista = "miLista";  // Reemplaza con la clave de la lista que quieres verificar
+    public static String rutaJsonReal = "E:\\Proyectos\\json_iterator\\src\\main\\java\\org\\example\\colores.json";
+    public static String rutaJsonEsquema = "E:\\Proyectos\\json_iterator\\src\\main\\java\\org\\example\\coloresTemplate.json";
 
-        try {
-            FileReader reader = new FileReader(rutaJson);
-            JsonElement jsonElement = JsonParser.parseReader(reader);
-            buscarCampoVacioEnLista(jsonElement, claveLista);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) {
+        new ComprobadorTemplate(rutaJsonReal, rutaJsonEsquema);
     }
 
     private static void buscarCampoVacioEnLista(JsonElement elemento, String claveLista) {

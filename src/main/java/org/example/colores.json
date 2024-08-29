@@ -2,8 +2,10 @@
     "nombre": "Colores",
     "descripcion": "",
     "miLista": [
-        {"color": "rojo", "valor1": ""},
-        {"color": "verde", "valor2": "32"},
-        {"color": "azul", "valor3": null}
+        {
+            "color": "rojo",
+            "valor": 1,
+            "booleano": true
+        }
     ]
 }

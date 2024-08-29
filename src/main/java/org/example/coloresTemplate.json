@@ -1,0 +1,11 @@
+{
+    "nombre": "String",
+    "descripcion": "String",
+    "miLista": [
+        {
+            "color": "String",
+            "valor": "number",
+            "booleano": "boolean"
+        }
+    ]
+}
