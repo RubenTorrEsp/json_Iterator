@@ -3,9 +3,9 @@
     "descripcion": "String",
     "miLista": [
         {
-            "color": "String",
-            "valor": "number",
-            "booleano": "boolean"
+            "color": "boolean",
+            "valor": "string",
+            "booleano": "number"
         }
     ]
 }
