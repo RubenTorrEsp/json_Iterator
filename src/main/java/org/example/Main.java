@@ -60,11 +60,6 @@ public class Main {
                     buscarCampoVacio(valor);
                 }
             }
-        } else if (elemento.isJsonArray()) {
-            JsonArray array = elemento.getAsJsonArray();
-            for (JsonElement item : array) {
-                buscarCampoVacio(item);
-            }
         }
     }
 }
